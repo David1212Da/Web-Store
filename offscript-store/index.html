@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1e9">
+  <meta name="description" content="Offscript is a considered edit of expressive streetwear, statement layers and everyday pieces. Find your next favourite fit.">
+  <title>OFFSCRIPT — Wear your own kind of loud</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement"><span>GOOD FITS. NO RULES.</span><span class="announcement-center">Free delivery on orders over ₦150,000</span><a href="#collection">Explore the edit <span aria-hidden="true">↗</span></a></div>
+
+  <header class="site-header" id="top">
+    <button class="icon-button menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+    <a class="wordmark" href="#top" aria-label="Offscript home">OFF<span>/</span>SCRIPT<span class="wordmark-dot">.</span></a>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <a href="#collection">Shop the edit</a>
+      <a href="#inspiration">Wear it your way</a>
+      <a href="#story">Our story</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button search-toggle" aria-label="Search products" title="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg></button>
+      <button class="bag-button" id="open-bag" aria-label="Open shopping bag">BAG <span class="bag-count" id="bag-count">0</span></button>
+    </div>
+  </header>
+  <div class="search-panel" id="search-panel" hidden>
+    <label for="product-search">Find your next favourite</label>
+    <div class="search-input-wrap"><input id="product-search" type="search" placeholder="Try “knit”, “jacket”, “olive”…" autocomplete="off"><button id="clear-search" aria-label="Clear search">×</button></div>
+  </div>
+
+  <main>
+    <section class="hero page-gutter" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span> THE NEW DROP · NO. 04</p>
+        <h1 id="hero-title">Wear your own<br>kind of <em>loud.</em></h1>
+        <p class="hero-lede">Good clothes, great energy. Meet the pieces that make getting dressed the best part of your day.</p>
+        <div class="hero-ctas"><a class="button button-dark" href="#collection">Shop the collection <span aria-hidden="true">↗</span></a><a class="text-link" href="#inspiration">Find your fit <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-note"><span class="note-spark" aria-hidden="true">✳</span><span>Made for the<br>main character.</span></div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="hero-image-wrap"><img src="assets/color-pop-knit-look.jpg" alt="Colour-block fuzzy knit styled with relaxed trousers" fetchpriority="high"></div>
+        <div class="hero-sticker" aria-label="Wear it your way"><span>WEAR IT</span><span>YOUR WAY</span><span class="sticker-star" aria-hidden="true">✳</span></div>
+        <div class="hero-caption"><span>01 / 04</span><span>THE COLOUR STUDY</span><span>↓ SCROLL TO EXPLORE</span></div>
+      </div>
+      <span class="hero-side-note" aria-hidden="true">GOOD TASTE, NO GATEKEEPING · GOOD TASTE, NO GATEKEEPING ·</span>
+    </section>
+
+    <div class="ticker" aria-label="Offscript: find your fit, wear it your way"><div class="ticker-track" aria-hidden="true"><span>FIND YOUR FIT</span><b>✳</b><span>WEAR IT YOUR WAY</span><b>✳</b><span>MAKE THE SIDEWALK YOUR RUNWAY</span><b>✳</b><span>FIND YOUR FIT</span><b>✳</b><span>WEAR IT YOUR WAY</span><b>✳</b><span>MAKE THE SIDEWALK YOUR RUNWAY</span><b>✳</b></div></div>
+
+    <section class="collection section-space page-gutter" id="collection" aria-labelledby="collection-title">
+      <div class="section-heading reveal"><div><p class="eyebrow">THE GOOD STUFF, ALL HERE</p><h2 id="collection-title">The <em>collection.</em></h2></div><p class="section-intro">A little bit polished. A little bit unexpected. All very you.</p></div>
+      <div class="collection-tools">
+        <div class="filter-list" role="group" aria-label="Filter products">
+          <button class="filter-chip is-active" data-filter="all" aria-pressed="true">Everything <span data-count="all">09</span></button>
+          <button class="filter-chip" data-filter="outerwear" aria-pressed="false">Outerwear</button>
+          <button class="filter-chip" data-filter="knitwear" aria-pressed="false">Knitwear</button>
+          <button class="filter-chip" data-filter="shirts" aria-pressed="false">Shirts</button>
+          <button class="filter-chip" data-filter="sets" aria-pressed="false">Sets & layers</button>
+        </div>
+        <button class="sort-button" id="sort-button">SORT <span aria-hidden="true">↕</span></button>
+      </div>
+      <p class="search-results" id="search-results" aria-live="polite"></p>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden><span>✳</span><h3>No fits found.</h3><p>Try another search or clear the filters.</p><button class="text-link" id="reset-filters">Show me everything ↗</button></div>
+      <p class="catalog-note">Photos are from your supplied product and styling references. Prices and size options are starter examples—update them to match your current stock before launch.</p>
+    </section>
+
+    <section class="fit-lab" id="fit-lab" aria-labelledby="fit-lab-title">
+      <div class="fit-lab-inner page-gutter">
+        <div class="fit-lab-heading reveal">
+          <div><p class="eyebrow">✳ THE OFFSCRIPT FIT LAB</p><h2 id="fit-lab-title">Need a fit?<br><em>Say less.</em></h2><p>Three pieces. One very good plan. Shuffle until it feels like you.</p></div>
+          <button class="shuffle-button" id="shuffle-fit"><span class="shuffle-die" aria-hidden="true">⤨</span><span>Shuffle my fit</span><span class="shuffle-arrow" aria-hidden="true">↗</span></button>
+        </div>
+        <div class="fit-story"><div><p id="fit-number">FIT NO. 01</p><h3 id="fit-name">Colour after dark</h3></div><p id="fit-description">A soft statement up top, easy layers below. Made for plans after six.</p></div>
+        <div class="fit-result" id="fit-result" aria-live="polite"></div>
+        <div class="fit-lab-bottom"><span>YOUR STYLE. YOUR RULES.</span><a href="#collection">Browse everything <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="inspiration section-space" id="inspiration" aria-labelledby="inspiration-title">
+      <div class="page-gutter">
+        <div class="section-heading reveal"><div><p class="eyebrow">A LITTLE OUTFIT INSPIRATION</p><h2 id="inspiration-title">What’s the <em>occasion?</em></h2></div><p class="section-intro">Pick a mood. We’ll handle the outfit conversation.</p></div>
+        <div class="look-grid">
+          <article class="look-card look-card-one reveal"><img src="assets/olive-shirt-look.jpg" alt="Olive short-sleeve shirt styled with charcoal trousers, loafers and a watch" loading="lazy"><div class="look-shade"></div><div class="look-number">LOOK 01</div><div class="look-copy"><p>THE NOT-SO-BASIC ONE</p><h3>Easy does it.</h3><button class="look-shop" data-look="olive">Shop this look <span>↗</span></button></div></article>
+          <article class="look-card look-card-two reveal"><img src="assets/heart-patch-shirt-look.jpg" alt="Cream shirt with bold red heart patches and relaxed black trousers" loading="lazy"><div class="look-shade"></div><div class="look-number">LOOK 02</div><div class="look-copy"><p>THE GOOD MOOD FIT</p><h3>Heart on sleeve.</h3><button class="look-shop" data-look="heart">Shop this look <span>↗</span></button></div></article>
+          <article class="look-card look-card-three reveal"><img src="assets/streetwear-editorial.jpg" alt="Streetwear look in a black hoodie and cargos with bold yellow accents" loading="lazy"><div class="look-shade"></div><div class="look-number">LOOK 03</div><div class="look-copy"><p>THE AFTER-HOURS EDIT</p><h3>Out of office.</h3><button class="look-shop" data-look="street">Shop this look <span>↗</span></button></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifesto page-gutter section-space" id="story" aria-labelledby="story-title">
+      <div class="manifesto-card reveal"><div class="manifesto-top"><span>OFFSCRIPT / EST. FOR THE BOLD</span><span>OUR THING ✳</span></div><div class="manifesto-content"><p class="eyebrow">WHY WE GET DRESSED</p><h2 id="story-title">Style should feel like <em>you.</em></h2><p>We’re here for the outfit repeaters, the colour experimenters, the “where did you get that?” moments. Our aim is simple: make expressive, easy-to-wear pieces feel within reach—and make room for everyone to wear them their own way.</p><a href="#collection" class="button button-light">Find your next favourite <span aria-hidden="true">↗</span></a></div><span class="manifesto-squiggle" aria-hidden="true">✳</span></div>
+      <div class="promise-row"><div><span class="promise-icon">01</span><strong>Good energy, always</strong><p>Pieces that lift a regular day.</p></div><div><span class="promise-icon">02</span><strong>Style without a rulebook</strong><p>Wear it your way. Every time.</p></div><div><span class="promise-icon">03</span><strong>Picked with intention</strong><p>Distinctive details, considered fits.</p></div></div>
+    </section>
+
+    <section class="newsletter page-gutter" aria-labelledby="newsletter-title"><div class="newsletter-mark" aria-hidden="true">✳</div><div><p class="eyebrow">THE GOOD MAIL</p><h2 id="newsletter-title">A little style <em>in your inbox.</em></h2><p>New drops, fit ideas, and the occasional very good playlist.</p></div><form id="newsletter-form" class="newsletter-form"><label class="sr-only" for="newsletter-email">Your email address</label><input id="newsletter-email" name="email" type="email" placeholder="Your email address" required><button type="submit" aria-label="Sign up for the newsletter">I’M IN <span aria-hidden="true">↗</span></button><p class="form-message" id="form-message" aria-live="polite"></p></form></section>
+  </main>
+
+  <footer class="site-footer page-gutter"><a class="wordmark footer-wordmark" href="#top">OFF<span>/</span>SCRIPT<span class="wordmark-dot">.</span></a><p>GOOD FITS. NO RULES. © <span id="year"></span> OFFSCRIPT</p><div><a href="#collection">Shop</a><a href="#story">Our story</a><a href="#top">Back to top ↑</a></div></footer>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="bag-drawer" id="bag-drawer" aria-label="Shopping bag" aria-hidden="true" inert>
+    <div class="drawer-header"><div><p class="eyebrow">YOUR PICKS, YOUR CALL</p><h2>Your bag <span id="drawer-count">(0)</span></h2></div><button class="close-button" data-close aria-label="Close shopping bag">×</button></div>
+    <div class="bag-items" id="bag-items"></div>
+    <div class="bag-empty" id="bag-empty"><span>✳</span><p>Your bag is taking a little breather.</p><button class="button button-dark" data-close>Find your fit</button></div>
+    <div class="drawer-footer" id="drawer-footer"><div class="subtotal"><span>Subtotal</span><strong id="bag-subtotal">₦0</strong></div><p>Delivery is calculated when you place your order.</p><button class="button button-dark checkout-button" id="checkout-button">Continue to order <span aria-hidden="true">↗</span></button><p class="checkout-hint" id="checkout-hint" aria-live="polite"></p></div>
+  </aside>
+
+  <dialog class="quick-view" id="quick-view" aria-labelledby="quick-title"><button class="close-button modal-close" aria-label="Close product details">×</button><div id="quick-content"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
